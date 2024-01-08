@@ -16,10 +16,10 @@ const app = express();
 
 
 app.use(express.json());
+app.use(errorHandler);
 // app.use(bodyParser.urlencoded({extended: false}));
 app.use("/api/contacts",require("./routes/contactRoutes"));
-app.use(errorHandler);
-
+app.use("/api/users",require("./routes/userRoutes"));
 
 
 
